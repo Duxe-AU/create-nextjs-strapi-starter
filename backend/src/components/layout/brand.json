@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_element_brands",
+  "info": {
+    "displayName": "Brand",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "link": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::page.page"
+    },
+    "logo": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    }
+  }
+}

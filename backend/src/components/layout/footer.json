@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_layout_footers",
+  "info": {
+    "displayName": "Footer",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "links": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::page.page"
+    },
+    "term_links": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::page.page"
+    },
+    "brand": {
+      "type": "component",
+      "repeatable": false,
+      "component": "layout.brand"
+    }
+  }
+}
