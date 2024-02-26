@@ -1,0 +1,29 @@
+{
+  "collectionName": "components_layout_text_image_splits",
+  "info": {
+    "displayName": "TextImageSplit"
+  },
+  "options": {},
+  "attributes": {
+    "content": {
+      "type": "richtext"
+    },
+    "image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "direction": {
+      "type": "enumeration",
+      "enum": [
+        "text->image",
+        "image->text"
+      ]
+    }
+  }
+}

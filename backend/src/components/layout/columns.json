@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_layout_columns",
+  "info": {
+    "displayName": "Columns"
+  },
+  "options": {},
+  "attributes": {
+    "Items": {
+      "displayName": "ColumnItem",
+      "type": "component",
+      "repeatable": true,
+      "component": "layout.column-item"
+    }
+  }
+}
