@@ -1,12 +1,17 @@
-export type StrapiSingleType = {
-  id: number;
-  attributes: {
-    createdAt: string;
-    updatedAt: string;
-    publishedAt: string;
-    seo: StrapiSEOType;
-  },
+export type StrapiSingleType<T = {}> = {
+  data: {
+    id: number;
+    attributes: {
+      createdAt: string;
+      updatedAt: string;
+      publishedAt: string;
+    } & T,
+  }
   meta: object;
+}
+
+export type StrapiCollectionType<T> = StrapiSingleType & {
+  data: StrapiSingleType<T>["data"][];
 }
 
 export type StrapiImageType = {
@@ -43,9 +48,6 @@ export type StrapiPageType = {
   createdAt: string;
   updatedAt: string;
   publishedAt: string;
-  slug: string;
-  shortName: string;
-  sections: StrapiDynamicZoneType[];
 }
 
 export type StrapiSEOSocialType = {

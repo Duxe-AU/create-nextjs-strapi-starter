@@ -1,5 +1,7 @@
 export default function HomePage() {
   return (
-    <main>HomePage</main>
+    <main className="max-w-screen-lg mx-auto px-4">
+
+    </main>
   )
 }

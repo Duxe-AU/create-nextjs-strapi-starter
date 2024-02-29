@@ -4,11 +4,11 @@ import { ReactNode, createContext, useContext } from "react";
 import { GlobalType } from "../types/common";
 
 type StrapiContextType = {
-  global: GlobalType;
+  global: GlobalType["data"];
 }
 
 type StrapiProviderProps = {
-  global: GlobalType;
+  global: GlobalType["data"];
   children: ReactNode;
 }
 

@@ -1,9 +1,10 @@
 import { cache } from "react";
 import { axiosClient } from "../lib/utils/api";
+import { GlobalType } from "@/lib/types/common";
 
 const getGlobalContent = cache(async (params: {}) => {
   try {
-    const { data } = await axiosClient.get("/global", {
+    const { data } = await axiosClient.get<GlobalType>("/global", {
       params,
     });
 

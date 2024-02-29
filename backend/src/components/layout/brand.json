@@ -21,6 +21,10 @@
         "videos",
         "audios"
       ]
+    },
+    "text": {
+      "type": "string",
+      "required": true
     }
   }
 }

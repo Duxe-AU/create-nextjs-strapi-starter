@@ -9,11 +9,11 @@ export default function Page({ params }: { params: { slug: string } }) {
 }
 
 export const generateStaticParams = async () => {
-  const { data = [] } = await axiosClient.get("/pages");
+  const { data: { data = [] }} = await axiosClient.get("/pages");
 
   return data.length > 0
-    ? data.map(
-      ({ attributes: { slug }}: PageType) => ({ slug })
-    )
+    ? data
+        .map(({ attributes: { slug }}: PageType) => ({ slug }))
+        .filter(({ slug }: { slug: string }) => slug !== "/")
     : [{ slug: "not-found" }];
 }
