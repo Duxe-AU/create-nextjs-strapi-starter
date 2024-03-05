@@ -1,11 +1,12 @@
 {
   "collectionName": "components_layout_columns",
   "info": {
-    "displayName": "Columns"
+    "displayName": "Columns",
+    "description": ""
   },
   "options": {},
   "attributes": {
-    "Items": {
+    "items": {
       "displayName": "ColumnItem",
       "type": "component",
       "repeatable": true,

@@ -42,7 +42,7 @@
         "layout.footer",
         "layout.header",
         "layout.columns",
-        "layout.text-image-split"
+        "element.text-image-split"
       ]
     }
   }

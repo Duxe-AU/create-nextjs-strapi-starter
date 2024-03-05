@@ -22,6 +22,11 @@
     },
     "message": {
       "type": "text"
+    },
+    "cta": {
+      "type": "component",
+      "repeatable": false,
+      "component": "element.link"
     }
   }
 }

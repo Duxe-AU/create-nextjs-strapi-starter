@@ -21,7 +21,7 @@ export default function Header({ global }: HeaderProps) {
   const toggleMenu = () => setShowMenu(val => !val);
 
   return (
-    <div className="container mx-auto h-20 flex items-center justify-center lg:justify-between relative">
+    <div className="container mx-auto h-20 flex items-center justify-center lg:justify-between relative px-4">
       {global.attributes.header?.brand && <Link
         className="relative z-10"
         href={global.attributes.header?.brand?.link?.data?.attributes?.pagePath ?? "/"}

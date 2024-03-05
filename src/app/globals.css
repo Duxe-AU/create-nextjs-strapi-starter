@@ -1,3 +1,41 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Start of Typography Styles */
+@layer utilities {
+  .headline { @apply text-s-headline }
+  .text-h1 { @apply text-s-h1 }
+  .text-h2 { @apply text-s-h2 }
+  .text-h3 { @apply text-s-h3 }
+  .text-h4 { @apply text-s-h4 }
+  .text-h5 { @apply text-s-h5 }
+  .text-body { @apply text-s-body }
+
+  @screen md {
+    .headline { @apply text-m-headline }
+    .text-h1 { @apply text-m-h1 }
+    .text-h2 { @apply text-m-h2 }
+    .text-h3 { @apply text-m-h3 }
+    .text-h4 { @apply text-m-h4 }
+    .text-h5 { @apply text-m-h5 }
+    .text-body { @apply text-m-body }
+  }
+
+  @screen xl  {
+    .headline { @apply text-xl-headline }
+    .text-h1 { @apply text-xl-h1 }
+    .text-h2 { @apply text-xl-h2 }
+    .text-h3 { @apply text-xl-h3 }
+    .text-h4 { @apply text-xl-h4 }
+    .text-h5 { @apply text-xl-h5 }
+    .text-body { @apply text-xl-body }
+  }
+}
+
+h1 { @apply text-h1 }
+h2 { @apply text-h2 }
+h3 { @apply text-h3 }
+h4 { @apply text-h4 }
+h5 { @apply text-h5 }
+/* End of Typography Styles */
