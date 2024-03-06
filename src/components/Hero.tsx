@@ -27,7 +27,7 @@ export default function Hero({
         className="absolute top-0 left-0 object-cover"
       />}
 
-      <div className="h-full flex items-center relative container mx-auto px-4">
+      <div className="h-full flex items-center relative container">
         <div className="flex-1 flex flex-col justify-center">
           <p className="text-headline">{headline}</p>
           <br />

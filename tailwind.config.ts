@@ -1,3 +1,4 @@
+import typography from '@tailwindcss/typography';
 import type { Config } from 'tailwindcss'
 
 const config: Config = {
@@ -8,12 +9,16 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      container: {
+        center: true,
+        padding: '1rem',
+      },
       fontFamily: {
         'sans': ['var(--app-font-serif)'],
       },
       fontSize: {
         // Larger Screen
-        'xl-headline': ['125px', '125px'],
+        'xl-headline': ['125px', '130px'],
         'xl-h1': ['72px', '68px'],
         'xl-h2': ['52px', '56px'],
         'xl-h3': ['42px', '42px'],
@@ -31,7 +36,7 @@ const config: Config = {
         'm-body': ['20px', { lineHeight: '24px', fontWeight: 300 }],
 
         // Mobile
-        's-headline': ['60px', '60px'],
+        's-headline': ['60px', '64px'],
         's-h1': ['48px', '44px'],
         's-h2': ['36px', '36px'],
         's-h3': ['28px', '28px'],
@@ -40,7 +45,7 @@ const config: Config = {
         's-body': ['16px', { lineHeight: '20px', fontWeight: 300 }],
 
         // Placeholder
-        'headline': ['60px', '60px'],
+        'headline': ['60px', '64px'],
         'h1': ['40px', '40px'],
         'h2': ['36px', '36px'],
         'h3': ['28px', '28px'],
@@ -61,6 +66,8 @@ const config: Config = {
       }
     },
   },
-  plugins: [],
+  plugins: [
+    typography,
+  ],
 }
 export default config

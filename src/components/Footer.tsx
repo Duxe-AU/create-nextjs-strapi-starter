@@ -18,7 +18,7 @@ export default function Footer({ global }: FooterProps) {
 
   return (
     <section className="w-full bg-slate-100 border-t border-slate-200">
-      <div className="container mx-auto px-4 min-h-80 flex flex-col md:flex-row">
+      <div className="container min-h-80 flex flex-col md:flex-row">
         <div className="flex-1 flex flex-col gap-2 justify-center items-center md:items-start">
           {global.attributes.footer?.links?.data?.map(
             ({ attributes: { navLinkText, pagePath } }) => <Link
