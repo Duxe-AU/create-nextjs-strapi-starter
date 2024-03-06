@@ -9,6 +9,7 @@ import { fas } from "@fortawesome/free-solid-svg-icons"
 import { fab } from "@fortawesome/free-brands-svg-icons";
 import { far } from "@fortawesome/free-regular-svg-icons";
 import "@fortawesome/fontawesome-svg-core/styles.css"
+import Footer from "@/components/Footer";
 
 config.autoAddCss = false;
 library.add(fas);
@@ -31,11 +32,14 @@ export default async function RootLayout({
   children: React.ReactNode
 }) {
   const global = await getGlobalContent({ populate: [
-    "footer.navLinks.imageUrl",
-    "footer.termLinks.imageUrl",
+    "footer.brand.link",
+    "footer.brand.logo",
+    "footer.links",
+    "footer.termLinks",
     "header.brand.link",
     "header.brand.logo",
     "header.links",
+    "seo.metaSocial.socialNetwork",
     "siteLogo",
     "siteLogoDark",
   ] });
@@ -48,6 +52,7 @@ export default async function RootLayout({
         <StrapiProvider global={global.data}>
           <Header global={global.data} />
           {children}
+          <Footer global={global.data} />
         </StrapiProvider>
       </body>
     </html>

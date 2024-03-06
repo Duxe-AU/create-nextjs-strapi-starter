@@ -51,10 +51,11 @@ export type StrapiPageType = {
 }
 
 export type StrapiSEOSocialType = {
-  socialNetwork: string[];
+  socialNetwork: string;
   title: string;
   description: string;
   image: StrapiImageType;
+  url: string;
 }
 
 export type StrapiSEOType = {

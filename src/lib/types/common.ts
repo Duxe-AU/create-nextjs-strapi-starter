@@ -30,7 +30,12 @@ export type GlobalType = StrapiSingleType<{
     }
   };
   footer: {
-    navLinks: LinkType[];
-    termLinks: LinkType[];
+    links: StrapiCollectionType<PageType>;
+    termLinks: StrapiCollectionType<PageType>;
+    brand: {
+      text: string;
+      logo: StrapiImageType;
+      link: StrapiSingleType<PageType>;
+    }
   };
 }>

@@ -11,7 +11,7 @@
       "relation": "oneToMany",
       "target": "api::page.page"
     },
-    "term_links": {
+    "termLinks": {
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::page.page"
