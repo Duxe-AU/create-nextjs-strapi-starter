@@ -1,4 +1,4 @@
-NextJS + Strapi
+# NextJS + Strapi
 
 Note: Please ensure you have installed [nodejs](https://nodejs.org/en/download/)
 
