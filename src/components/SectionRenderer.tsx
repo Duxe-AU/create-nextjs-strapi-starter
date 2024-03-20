@@ -27,7 +27,7 @@ export default async function SectionRenderer({ slug, }: SectionRendererProps) {
           return <Hero key={id} {...props} />
         case "element.text-image-split":
           return <TextImageSplit key={id} {...props} />
-        case "leyout.columns":
+        case "layout.columns":
           return <ColumnLayout key={id} {...props} />
         default:
           return null;
