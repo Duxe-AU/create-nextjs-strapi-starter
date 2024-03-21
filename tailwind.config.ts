@@ -63,7 +63,17 @@ const config: Config = {
         '1/2': '50%',
         '3/4': '75%',
         'full': '100%',
-      }
+      },
+      typography: (theme: any) => ({
+        DEFAULT: {
+          css: {
+            img: {
+              marginTop: theme("spacing.4"),
+              marginBottom: theme("spacing.4"),
+            }
+          }
+        }
+      })
     },
   },
   plugins: [
