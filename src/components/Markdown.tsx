@@ -12,7 +12,7 @@ export default function Markdown({ children }: MarkdownProps) {
   return (
     <div
       className="prose"
-      dangerouslySetInnerHTML={{ __html: parse(content, { breaks: true }) }}
+      dangerouslySetInnerHTML={{ __html: parse(content) }}
     ></div>
   )
 }

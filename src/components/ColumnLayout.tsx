@@ -1,4 +1,3 @@
-import { parse } from "marked";
 import Markdown from "./Markdown";
 
 type ColumnLayoutProps = {
@@ -29,7 +28,7 @@ export default function ColumnLayout({
 
   return (
     <section className="container">
-      <div className={`grid ${gridCols[items.length - 1]} gap-2`}>
+      <div className={`grid ${gridCols[items.length - 1]} gap-4`}>
         {items
           .filter(({ content }) => content != null)
           .map(
