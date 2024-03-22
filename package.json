@@ -1,6 +1,8 @@
 {
-  "name": "next-strapi-template",
+  "name": "@duxe/create-nextjs-strapi-starter",
+  "description": "A starter project for building websites backed with CMS. Built with NextJS v13.5.6 and Strapi v4.12.5",
   "version": "0.1.0",
+  "bin": "./bin/cli.js",
   "private": true,
   "scripts": {
     "dev": "concurrently \"cd backend && npm run develop\" \"next dev\"",
