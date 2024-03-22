@@ -1,0 +1,38 @@
+{
+  "collectionName": "components_layout_split_sections",
+  "info": {
+    "displayName": "SplitSection",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "firstColumnImage": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "secondColumnImage": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "firstColumnContent": {
+      "type": "richtext"
+    },
+    "secondColumnContent": {
+      "type": "richtext"
+    }
+  }
+}

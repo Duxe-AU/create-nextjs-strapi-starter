@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_home_milestone_items",
+  "info": {
+    "displayName": "MilestoneItem"
+  },
+  "options": {},
+  "attributes": {
+    "weight": {
+      "type": "string"
+    },
+    "kind": {
+      "type": "string"
+    },
+    "image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}
