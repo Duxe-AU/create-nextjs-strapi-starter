@@ -1,14 +1,12 @@
 {
   "collectionName": "components_layout_column_items",
   "info": {
-    "displayName": "ColumnItem",
-    "description": ""
+    "displayName": "ColumnItem"
   },
   "options": {},
   "attributes": {
     "content": {
-      "type": "richtext",
-      "required": true
+      "type": "richtext"
     }
   }
 }

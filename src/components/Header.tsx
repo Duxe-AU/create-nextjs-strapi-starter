@@ -6,7 +6,7 @@ import Link from "next/link";
 import { useState } from "react";
 import { getImageData } from "@/lib/utils/strapi";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBars } from "@fortawesome/free-solid-svg-icons";
+import { faAustralSign, faBars, faEarthOceania, faExchange } from "@fortawesome/free-solid-svg-icons";
 import { usePathname } from "next/navigation";
 
 type HeaderProps = {
@@ -22,7 +22,7 @@ export default function Header({ global }: HeaderProps) {
 
   return (
     <section className="w-full bg-slate-100 border-b border-slate-200">
-      <div className="container h-20 flex items-center justify-center lg:justify-between relative px-4">
+      <div className="container h-16 flex items-center justify-center md:justify-between relative px-4">
         {global.attributes.header?.brand && <Link
           className="relative z-20"
           href={global.attributes.header?.brand?.link?.data?.attributes?.pagePath ?? "/"}
@@ -36,32 +36,43 @@ export default function Header({ global }: HeaderProps) {
               width={0}
               className="h-8 w-40"
             />
-            : <p className="text-3xl pointer-events-none">{global.attributes.siteName}</p>}
+            : <h4 className="pointer-events-none">{global.attributes.siteName}</h4>}
         </Link>}
-        <div className="hidden lg:flex gap-8 items-center px-4">
+        <div className="hidden md:flex gap-8 lg:gap-16 items-center px-4">
           {global.attributes.header?.links?.data?.map(
-            ({ attributes: { navLinkText, pagePath } }) => <Link
-              className={`${pathname == pagePath ? "font-bold" : ""}`}
-              key={navLinkText}
-              href={pagePath}
-            >{navLinkText}</Link>
-          )}
+            ({ attributes: { navLinkText, pagePath, name } }) =>
+              (name || navLinkText
+                ? <Link
+                  className={`${pathname == pagePath ? "font-bold" : ""}`}
+                  key={navLinkText ?? name}
+                  href={pagePath}
+                >{navLinkText ?? name}</Link>
+                : null)
+            )}
+        </div>
+        <div className="py-2 px-4 space-x-2 bg-neutral-500 text-white rounded-xl hidden lg:block">
+          <span>CLG 0.360 AUD</span>
+          <FontAwesomeIcon icon={faEarthOceania} />
+          <FontAwesomeIcon icon={faAustralSign} />
         </div>
         <button
-          className="block lg:hidden absolute right-0 z-20 p-4"
+          className="block md:hidden absolute right-0 z-20 p-4"
           onClick={toggleMenu}
         >
           <FontAwesomeIcon icon={faBars} className="text-slate-800 text-3xl" />
         </button>
-        {showMenu && <div className="absolute w-full left-0 top-0 pt-20 min-h-[64px] flex lg:hidden flex-col text-right bg-slate-200 gap-1 z-10">
+        {showMenu && <div className="absolute w-full left-0 top-0 pt-20 min-h-[64px] flex md:hidden flex-col text-right bg-slate-200 gap-1 z-10">
           {global.attributes.header?.links?.data?.map(
-            ({ attributes: { navLinkText, pagePath } }) => <Link
-              className={`relative p-4 ${pathname == pagePath ? "font-bold" : ""}`}
-              key={navLinkText}
-              href={pagePath}
-              onClick={toggleMenu}
-            >{navLinkText}</Link>
-          )}
+            ({ attributes: { navLinkText, pagePath, name } }) =>
+              (name || navLinkText
+                ? <Link
+                  className={`relative p-4 ${pathname == pagePath ? "font-bold" : ""}`}
+                  key={navLinkText ?? name}
+                  href={pagePath}
+                  onClick={toggleMenu}
+                >{navLinkText ?? name}</Link>
+                : null)
+            )}
         </div>}
       </div>
     </section>

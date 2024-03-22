@@ -10,6 +10,8 @@ import { fab } from "@fortawesome/free-brands-svg-icons";
 import { far } from "@fortawesome/free-regular-svg-icons";
 import "@fortawesome/fontawesome-svg-core/styles.css"
 import Footer from "@/components/Footer";
+import FALLBACK_SEO from "@/lib/contants/FALLBACK_SEO";
+import { mapImageUrl } from "@/lib/utils/strapi";
 
 config.autoAddCss = false;
 library.add(fas);
@@ -21,9 +23,22 @@ const inter = Inter({
   variable: "--app-font-sans",
 });
 
-export const metadata: Metadata = {
-  title: "Duxe | NextJS | Strapi",
-  description: "A template for building websites using NextJS and Strapi as headless CMS for content management.",
+export const metadata = async (): Promise<Metadata> => {
+  const global = await getGlobalContent({ populate: ["seo", "seo.metaImage"] });
+
+  if (!global) return FALLBACK_SEO;
+
+  return {
+    title: global.data.attributes.seo.metaTitle,
+    description: global.data.attributes.seo.metaDescription,
+    ...(global.data.attributes.seo.metaImage.data
+      ? {
+        icons: {
+          icon: [mapImageUrl(global.data.attributes.seo.metaImage)],
+        }
+      }
+      : {})
+  }
 }
 
 export default async function RootLayout({

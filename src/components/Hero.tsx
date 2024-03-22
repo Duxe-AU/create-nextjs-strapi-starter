@@ -8,17 +8,20 @@ export type HeroProps = {
   headline?: string;
   message?: string;
   cta?: LinkType;
+  textVariant?: "light" | "dark";
 }
 
 export default function Hero({
   backgroundImage,
   headline,
   message,
+  textVariant = "light",
 }: HeroProps) {
   const [imageSrc, alt] = getImageData(backgroundImage);
+  const textColor = textVariant === "light" ? "!text-white" : "";
 
   return (
-    <section className="w-full mx-auto h-screen max-h-[800px] relative">
+    <section className={`${textColor} w-full mx-auto h-screen max-h-[800px] relative`}>
       {/* Background Image */}
       {imageSrc && <Image
         src={imageSrc}

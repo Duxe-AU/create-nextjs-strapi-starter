@@ -27,6 +27,14 @@
       "type": "component",
       "repeatable": false,
       "component": "element.link"
+    },
+    "textVariant": {
+      "type": "enumeration",
+      "enum": [
+        "light",
+        "dark"
+      ],
+      "default": "light"
     }
   }
 }

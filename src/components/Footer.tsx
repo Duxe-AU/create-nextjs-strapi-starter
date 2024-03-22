@@ -21,12 +21,15 @@ export default function Footer({ global }: FooterProps) {
       <div className="container min-h-80 flex flex-col md:flex-row">
         <div className="flex-1 flex flex-col gap-2 justify-center items-center md:items-start">
           {global.attributes.footer?.links?.data?.map(
-            ({ attributes: { navLinkText, pagePath } }) => <Link
-              key={navLinkText}
-              href={pagePath}
-              className="hover:underline"
-            >{navLinkText}</Link>
-          )}
+            ({ attributes: { navLinkText, pagePath, name } }) =>
+              (name || navLinkText
+                ? <Link
+                  key={navLinkText ?? name}
+                  href={pagePath}
+                  className="hover:underline"
+                >{navLinkText ?? name}</Link>
+                : null)
+            )}
           <br />
           <div className="flex gap-4 justify-center sm:justify-start items-center">
             <p>Follow us on</p>

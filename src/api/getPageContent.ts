@@ -1,5 +1,5 @@
 import { PageType } from "@/lib/types/common";
-import { StrapiCollectionType, StrapiPageType } from "@/lib/types/strapi";
+import { StrapiCollectionType } from "@/lib/types/strapi";
 import { axiosClient } from "@/lib/utils/api";
 
 const getPageContent = async (slug: string, params: {}) => {

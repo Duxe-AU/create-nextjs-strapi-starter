@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_element_breaker_texts",
+  "info": {
+    "displayName": "BreakerText",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "message": {
+      "type": "richtext",
+      "required": true
+    }
+  }
+}
