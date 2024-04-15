@@ -3,6 +3,10 @@ import BreakerText from "@/components/home/BreakerText";
 import Milestones from "@/components/home/Milestones";
 import SplitSection from "@/components/home/SplitSection";
 
+export const revalidate = process.env.NEXT_PUBLIC_BUILD_SSG === "1" && process.env.NODE_ENV === "production"
+  ? null
+  : 0;
+
 export default function HomePage() {
   return (
     <main>
